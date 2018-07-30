@@ -1,0 +1,53 @@
+body {
+  background: #1b1a19;
+}
+
+.test {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.test__box {
+  height: 75vh;
+  cursor: pointer;
+  position: relative;
+}
+
+.test__img {
+  height: 100%;
+  width: auto;
+  transition: transform 500ms ease-out;
+}
+
+.test__pic {
+  height: 100%;
+  overflow: hidden;
+}
+
+.test__text {
+  mix-blend-mode: difference;
+  color: white;
+  position: absolute;
+  font: 120px Arial;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  letter-spacing: -2px;
+  transition: all 500ms ease-out;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.test__box:hover .test__img {
+  transform: scale(1.05);
+}
+
+.test__box:hover .test__text {
+  transform: translate(-50%, -50%) scaleX(1.1);
+  letter-spacing: 4px;
+}
